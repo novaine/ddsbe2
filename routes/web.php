@@ -20,3 +20,10 @@ $router->get('/', function () use ($router) {
 $router->group(['prefix' => 'api'], function () use ($router) {
     $router->get('/users',['uses' => 'UserController@getUsers']);
 });
+
+$router->get('/users','UserController@index'); //get all user records
+$router->post('/users', 'UserController@add'); //create new user record
+$router->get('/users/{id}', 'UserController@show'); //get all users by id
+$router->put('/users/{id}', 'UserController@update'); //update all fields in a user record
+$router->patch('/users/{id}', 'UserController@update'); //update specific fields in user record
+$router->delete('/users/{id}', 'Usercontroller@delete'); //delete user record by selecting an id
