@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Model{
 
-    protected $table = 'tbluserinfo';
+    protected $table = 'tbluserinfo2';
     
     protected $fillable = [ 'UserID', 'Username', 'Password'];
 
-    public $timestamps = false;
+    public $timestamps = true;
     protected $primaryKey = 'UserID';
 }
